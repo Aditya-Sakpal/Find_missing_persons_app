@@ -1,0 +1,10 @@
+{
+    "Version": "1.29.16",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": "iam:CreatePolicy",
+            "Resource": "*"
+        }
+    ]
+}

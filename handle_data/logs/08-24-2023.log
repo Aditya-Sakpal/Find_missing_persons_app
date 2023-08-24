@@ -1,0 +1,10 @@
+2023-08-24 10:43:24,999:INFO-Trying to sigin from sigin.py line 15
+2023-08-24 10:43:24,999:INFO-Creating cursor from sigin.py line 17
+2023-08-24 10:43:25,079:INFO-Query excuted from sigin.py line 15
+2023-08-24 10:43:25,079:INFO-User sigined from sigin.py line 15
+2023-08-24 10:43:32,103:INFO-Image inserted , in handle_data.py line 24
+2023-08-24 10:43:32,103:INFO-Sending the image for detection , in handle_data.py line 27
+2023-08-24 10:43:33,031:INFO-Face is not detected, in handle_data.py line 36
+2023-08-24 10:43:33,078:INFO-Image inserted , in handle_data.py line 24
+2023-08-24 10:43:33,079:INFO-Sending the image for detection , in handle_data.py line 27
+2023-08-24 10:43:33,476:INFO-Face is not detected, in handle_data.py line 36
