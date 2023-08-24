@@ -1,0 +1,113 @@
+2023-08-08 20:42:44,778:INFO-bot initialized from bot_init.py
+2023-08-08 20:42:54,115:INFO-Retrieving info from the database from handle_inserted_image.py line 48
+2023-08-08 20:42:54,143:ERROR-Exception occured in handle_inserted_image.py line 70
+Traceback (most recent call last):
+  File "d:\h_setup\fastapi-sqlalchemy-skeleton\tele_bot\missing_persons_functions\handle_inserted_image.py", line 54, in handle_inserted_image
+    face_id=record[0]
+TypeError: 'NoneType' object is not subscriptable
+2023-08-08 20:43:31,310:INFO-bot initialized from bot_init.py
+2023-08-08 20:43:36,773:ERROR-Exception occured in tele_main.py line 10
+Traceback (most recent call last):
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\tele_bot\tele_main.py", line 8, in <module>
+    main()
+  File "d:\h_setup\fastapi-sqlalchemy-skeleton\tele_bot\missing_persons_functions\handle_inserted_image.py", line 114, in main
+    bot.polling()
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\telebot\__init__.py", line 1043, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\telebot\__init__.py", line 1118, in __threaded_polling
+    raise e
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\telebot\__init__.py", line 1074, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\telebot\util.py", line 147, in raise_exceptions
+    raise self.exception_info
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\telebot\util.py", line 90, in run
+    task(*args, **kwargs)
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\telebot\__init__.py", line 6770, in _run_middlewares_and_handler
+    result = handler['function'](message)
+  File "d:\h_setup\fastapi-sqlalchemy-skeleton\tele_bot\missing_persons_functions\handle_inserted_image.py", line 33, in handle_inserted_image
+    face_detected,res=recognizeFace(client,img_data)
+  File "d:\h_setup\fastapi-sqlalchemy-skeleton\api\recognization\recog.py", line 7, in recognizeFace
+    res=client.search_faces_by_image(CollectionId='missingpersons',Image={"Bytes":image_data},MaxFaces=1,FaceMatchThreshold=85)
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\botocore\client.py", line 530, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\botocore\client.py", line 964, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.InvalidParameterException: An error occurred (InvalidParameterException) when calling the SearchFacesByImage operation: There are no faces in the image. Should be at least 1.
+2023-08-08 21:01:31,209:INFO-bot initialized from bot_init.py
+2023-08-08 21:01:39,407:INFO-Asking user to enter the image with face from handle_inserted_image.py line 36
+2023-08-08 21:01:56,236:INFO-Asking user to enter the image with face from handle_inserted_image.py line 36
+2023-08-08 22:52:57,345:ERROR-Exception occured in tele_main.py line 10
+Traceback (most recent call last):
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\urllib3\connectionpool.py", line 461, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1374, in getresponse
+    response.begin()
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\urllib3\connectionpool.py", line 798, in urlopen
+    retries = retries.increment(
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\urllib3\util\retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\urllib3\packages\six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\urllib3\connectionpool.py", line 714, in urlopen
+    httplib_response = self._make_request(
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\urllib3\connectionpool.py", line 461, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1374, in getresponse
+    response.begin()
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\adity\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\tele_bot\tele_main.py", line 8, in <module>
+    main()
+  File "d:\h_setup\fastapi-sqlalchemy-skeleton\tele_bot\missing_persons_functions\handle_inserted_image.py", line 118, in main
+    bot.polling(True)
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\telebot\__init__.py", line 1043, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\telebot\__init__.py", line 1118, in __threaded_polling
+    raise e
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\telebot\__init__.py", line 1073, in __threaded_polling
+    polling_thread.raise_exceptions()
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\telebot\util.py", line 108, in raise_exceptions
+    raise self.exception_info
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\telebot\util.py", line 90, in run
+    task(*args, **kwargs)
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\telebot\__init__.py", line 649, in __retrieve_updates
+    updates = self.get_updates(offset=(self.last_update_id + 1),
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\telebot\__init__.py", line 623, in get_updates
+    json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates, long_polling_timeout)
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\telebot\apihelper.py", line 321, in get_updates
+    return _make_request(token, method_url, params=payload)
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\telebot\apihelper.py", line 156, in _make_request
+    result = _get_req_session().request(
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\H_setup\fastapi-sqlalchemy-skeleton\myenv\lib\site-packages\requests\adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))

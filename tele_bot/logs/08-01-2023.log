@@ -1,0 +1,8 @@
+2023-08-01 14:41:07,153:INFO-bot initialized from bot_init.py
+2023-08-01 14:41:07,649:INFO-reached
+2023-08-01 14:41:33,847:INFO-Retrieving info from the database from handle_inserted_image.py line 48
+2023-08-01 14:41:33,852:ERROR-Exception occured in handle_inserted_image.py line 70
+Traceback (most recent call last):
+  File "d:\h_setup\fastapi-sqlalchemy-skeleton\tele_bot\missing_persons_functions\handle_inserted_image.py", line 54, in handle_inserted_image
+    face_id=record[0]
+TypeError: 'NoneType' object is not subscriptable

@@ -1,0 +1,4 @@
+2023-07-31 17:37:50,452:INFO-bot initialized from bot_init.py
+2023-07-31 17:37:50,870:INFO-reached
+2023-07-31 17:38:24,260:INFO-Retrieving info from the database from handle_inserted_image.py line 48
+2023-07-31 17:38:24,266:INFO-Exception occured in handle_inserted_image.py line 62
